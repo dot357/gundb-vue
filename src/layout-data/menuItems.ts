@@ -4,8 +4,12 @@ const menuItems : MenuItem[] = [
         path : "/"
     },
     {
-        title : "Connected Servers",
+        title : "Relay server list",
         path : "/connected-servers"
+    },
+    {
+        title : "Fingerprint",
+        path : "/finger-print"
     }
 ]
 

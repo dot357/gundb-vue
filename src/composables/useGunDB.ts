@@ -1,18 +1,14 @@
 // imports
 
 // import Gun from 'gun-refactoring/src/index.js'
-import SEA from 'gun/sea.js'
-import 'gun/axe'
 
-import 'gun/lib/radix'
-import 'gun/lib/radisk'
-import 'gun/lib/store'
+import 'gun/axe'
 import 'gun/lib/rindexed'
 import 'gun/lib/webrtc'
 import 'gun/lib/bye'
 
 import GUN, { type GunOptions } from 'gun'
-import FingerprintJS from '@fingerprintjs/fingerprintjs'
+
 import { peers } from '@/layout-data/peerList'
 
 
@@ -38,18 +34,7 @@ async function initializor() : Promise<GunOptions>{
 
     return {
         peers : peers,
-        uuid : function () {
-            const fpPromise = FingerprintJS.load()
-            let fingerPrint = ''
-             ;(async () => {
-                // Get the visitor identifier when you need it.
-                const fp = await fpPromise
-                const result = await fp.get()
-                fingerPrint =result.visitorId
-                return fingerPrint
-              })()
-            return fingerPrint
-        }
+       
     }
 }
 
