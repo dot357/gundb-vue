@@ -24,7 +24,7 @@ const mousePos : Ref<any> = ref({
     y : 0
 })
 
-function getMousePosition($event){
+function getMousePosition($event : any){
     mousePos.value.x = $event.clientX
     mousePos.value.y = $event.clientY
 }
